@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  100% {
+      opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+body {
+    animation: fadeIn ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 1s ease-in;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fade-in {
+  opacity: 1;
+}
+
+.music {
+  display: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
+@layer components {
+  .fixed-left {
+    position: fixed;
+    height: 100%;
+    background: url('/public/images/left-bg.png');
+    /* background-size: cover; */
+    width: 60%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .scrollable-right {
+    margin-left: 60%;
+    overflow-y: auto;
+    height: 100vh;
   }
 }
