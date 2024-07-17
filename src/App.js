@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import CopyButton from "./components/CopyButton";
 import { useInView } from "react-intersection-observer";
 
