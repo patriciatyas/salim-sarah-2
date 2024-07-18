@@ -19,6 +19,7 @@ function FadeInSection({ children }) {
 function App() {
   return (
     <div className="relative items-center justify-center min-h-screen">
+
       <FadeInSection>
         <div className="hidden md:block fixed-left"></div>
       </FadeInSection>
