@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import CopyButton from "./components/CopyButton";
 import { useInView } from "react-intersection-observer";
+import BackgroundMusic from "./components/BackgroundMusic";
 
 function FadeInSection({ children }) {
   const { ref, inView } = useInView({
@@ -20,11 +21,14 @@ function App() {
   return (
     <div className="relative items-center justify-center min-h-screen">
 
-    <audio unmuted autoplay loop>
+    <div className="absolute top-0 z-10">
+      <BackgroundMusic />
+    </div>
+    {/* <audio unmuted autoplay loop>
       <source src={`${process.env.PUBLIC_URL}/up.ogg`} type="audio/ogg" />
       <source src={`${process.env.PUBLIC_URL}/up.mp3`} type="audio/mpeg" />
       Your browser does not support the audio element.
-    </audio>
+    </audio> */}
 
       <FadeInSection>
         <div className="hidden md:block fixed-left"></div>
@@ -32,7 +36,7 @@ function App() {
 
       <div className="md:scrollable-right">
         <div className="relative min-h-screen bg-paper">
-          <section className="relative items-center justify-center bg-landing-page bg-cover md:bg-right-bg pb-48">
+          <section className="relative items-center justify-center bg-landing-page bg-cover md:bg-right-bg pb-40">
             <div className="md:block hidden">
               <FadeInSection>
                 <img
