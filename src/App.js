@@ -317,7 +317,7 @@ function App() {
               </div>
               <FadeInSection>
                 <a
-                  href="https://maps.app.goo.gl/8rRTnk49vFzJfZf26"
+                  href="https://maps.app.goo.gl/PB9XCfNtJdjng2Yv6"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 mb-4 border border-maroon rounded-2xl px-10 text-lg tracking-wide font-garamond text-maroon font-semibold hover:text-white hover:bg-maroon transition duration-200"
