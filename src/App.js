@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import React from "react";
 import CopyButton from "./components/CopyButton";
 import { useInView } from "react-intersection-observer";
 
@@ -25,7 +25,7 @@ function App() {
 
       <div className="md:scrollable-right">
         <div className="relative min-h-screen bg-paper">
-          <section className="relative items-center justify-center bg-landing-page md:bg-right-bg pb-36">
+          <section className="relative items-center justify-center bg-landing-page bg-cover md:bg-right-bg pb-40">
             <div className="md:block hidden">
               <FadeInSection>
                 <img
@@ -326,7 +326,7 @@ function App() {
                 </a>
               </FadeInSection>
             </div>
-            <div className="bg-wedding-gift md:bg-paper flex flex-col items-center pb-36 md:bg-right-bg">
+            <div className="bg-wedding-gift bg-cover flex flex-col items-center pb-40 md:bg-right-bg">
               <FadeInSection>
                 <img
                   src="/images/wedding-gift.png"
