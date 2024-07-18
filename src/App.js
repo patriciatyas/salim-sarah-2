@@ -32,7 +32,7 @@ function App() {
 
       <div className="md:scrollable-right">
         <div className="relative min-h-screen bg-paper">
-          <section className="relative items-center justify-center bg-landing-page bg-cover md:bg-right-bg pb-44">
+          <section className="relative items-center justify-center bg-landing-page bg-cover md:bg-right-bg pb-48">
             <div className="md:block hidden">
               <FadeInSection>
                 <img
