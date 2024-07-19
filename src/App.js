@@ -72,70 +72,24 @@ function App() {
 
       <div className="md:scrollable-right">
         {/* <BackgroundMusic /> */}
-        <div id="secondPage" className="relative min-h-screen bg-paper w-screen">
-          <section className="relative items-center justify-center bg-cover md:bg-right-bg h-screen w-screen">
-            <div className="w-screen flex justify-center items-center">
+        <div id="secondPage" className="relative min-h-screen bg-paper md:bg-right-bg md:w-full">
+          <section className="flex relative items-center justify-center bg-cover h-screen w-screen">
+            <div className="w-screen flex justify-center items-center md:hidden ">
               <img src="/images/new-landing-page.png"
                   alt="landing-page"
                   className=""
                   />
             </div>
-            <div className="md:block hidden">
-              <FadeInSection>
+            <div className="hidden md:block">
                 <img
-                  src="/images/left-asset.png"
-                  alt="left-asset"
-                  className="md:absolute"
-                />
-              </FadeInSection>
-              <FadeInSection>
-                <img
-                  src="/images/right-asset.png"
-                  alt="right-asset"
-                  className="md:absolute md:right-0"
-                />
-              </FadeInSection>
-              <FadeInSection>
-                <img
-                  src="/images/crest-copy.png"
-                  alt="crest"
-                  className="md:absolute md:left-56 md:top-6"
-                />
-              </FadeInSection>
+                  src="/images/right-landing-page.png"
+                  alt="right-landing-page"
+                  className="md:absolute md:left-8 md:top-0"
+                /> 
             </div>
-            <div className="flex flex-col items-center justify-center text-center pt-[168px] fade-in pb-56">
-              {/* <FadeInSection>
-                <p className=" text-maroon text-m font-garamond w-32 leading-tight">
-                  Welcome to Our New Beginning
-                </p>
-              </FadeInSection>
-              <FadeInSection>
-                <img
-                  src="/images/salim-and.png"
-                  alt="salim-1"
-                  className="pt-4"
-                />
-              </FadeInSection>
-              <FadeInSection>
-                <img src="/images/sarah-1.png" alt="sarah-1" className="pt-2" />
-              </FadeInSection>
-              <FadeInSection>
-                <p className=" text-maroon text-m font-garamond w-32 leading-tight">
-                  Join us in celebrating our love. Your presence would be truly
-                  cherished
-                </p>
-              </FadeInSection> */}
-            </div>
-            <FadeInSection>
-              <img
-                src="/images/pilar-2.png"
-                alt="pilar"
-                className="hidden md:absolute md:left-1/2"
-              />
-            </FadeInSection>
           </section>
 
-          <section className="relative items-center justify-center min-h-screen md:bg-right-bg fade-in mt-12">
+          <section className="relative items-center justify-center min-h-screen md:bg-right-bg fade-in mt-12 md:mt-0">
           
             <FadeInSection>
               <img
