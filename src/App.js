@@ -1,8 +1,8 @@
 import "./App.css";
-import React from "react";
+import React , { useRef, useState } from "react";
 import CopyButton from "./components/CopyButton";
 import { useInView } from "react-intersection-observer";
-import BackgroundMusic from "./components/BackgroundMusic";
+// import BackgroundMusic from "./components/BackgroundMusic";
 
 function FadeInSection({ children }) {
   const { ref, inView } = useInView({
@@ -17,24 +17,48 @@ function FadeInSection({ children }) {
   );
 }
 
+
 function App() {
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const playMusic = () => {
+    if (audioRef.current && !isPlaying) {
+      audioRef.current.play()
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch(error => {
+          console.error("Failed to play audio:", error);
+        });
+    }
+  };
+
+  const handleButtonClick = () => {
+    playMusic();
+    // Scroll to the bottom of the page
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="relative items-center justify-center min-h-screen">
-
-    <div className="absolute top-0 z-10">
+    {/* <div className="absolute top-0 z-10">
       <BackgroundMusic />
-    </div>
-    {/* <audio unmuted autoplay loop>
-      <source src={`${process.env.PUBLIC_URL}/up.ogg`} type="audio/ogg" />
-      <source src={`${process.env.PUBLIC_URL}/up.mp3`} type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio> */}
+    </div> */}
+      <audio ref={audioRef} src="up.mp3" onEnded={() => setIsPlaying(false)}/>
+      <button onClick={handleButtonClick}>
+        Open Invitation
+      </button>
 
       <FadeInSection>
         <div className="hidden md:block fixed-left"></div>
       </FadeInSection>
 
       <div className="md:scrollable-right">
+      {/* <BackgroundMusic /> */}
         <div className="relative min-h-screen bg-paper">
           <section className="relative items-center justify-center bg-landing-page bg-cover md:bg-right-bg pb-40">
             <div className="md:block hidden">
