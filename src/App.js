@@ -36,11 +36,21 @@ function App() {
 
   const handleButtonClick = () => {
     playMusic();
+    const secondPage = document.getElementById('secondPage');
+
     // Scroll to the bottom of the page
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth'
-    });
+    // window.scrollTo({
+    //   top: document.body.scrollHeight,
+    //   behavior: 'smooth'
+    // });
+    if (secondPage) {
+      window.scrollTo({
+        top: secondPage.offsetTop,
+        behavior: 'smooth'
+      });
+    } else {
+      console.error("Second section element not found");
+    }
   };
 
   return (
@@ -49,9 +59,11 @@ function App() {
       <BackgroundMusic />
     </div> */}
       <audio ref={audioRef} src="up.mp3" onEnded={() => setIsPlaying(false)}/>
-      <button onClick={handleButtonClick}>
+      <section className="flex min-h-screen items-center justify-center bg-paper bg-cover">
+      <button onClick={handleButtonClick} className="border border-maroon rounded-2xl px-10 text-lg tracking-wide font-garamond text-maroon font-semibold hover:text-white hover:bg-maroon transition duration-200">
         Open Invitation
       </button>
+      </section>
 
       <FadeInSection>
         <div className="hidden md:block fixed-left"></div>
@@ -59,8 +71,8 @@ function App() {
 
       <div className="md:scrollable-right">
       {/* <BackgroundMusic /> */}
-        <div className="relative min-h-screen bg-paper">
-          <section className="relative items-center justify-center bg-landing-page bg-cover md:bg-right-bg pb-40">
+        <div id="secondPage" className="relative min-h-screen bg-paper">
+          <section className="relative items-center justify-center bg-landing-page bg-cover md:bg-right-bg pt-7">
             <div className="md:block hidden">
               <FadeInSection>
                 <img
@@ -91,20 +103,13 @@ function App() {
                 </p>
               </FadeInSection>
               <FadeInSection>
-                <img src="/images/salim-1.png" alt="salim-1" className="pt-2" />
+                <img src="/images/salim-and.png" alt="salim-1" className="pt-4" />
               </FadeInSection>
               <FadeInSection>
-                <img
-                  src="/images/and.png"
-                  alt="and"
-                  className="absolute top-80"
-                />
+                <img src="/images/sarah-1.png" alt="sarah-1" className="pt-2" />
               </FadeInSection>
               <FadeInSection>
-                <img src="/images/sarah-1.png" alt="sarah-1" className="pt-1" />
-              </FadeInSection>
-              <FadeInSection>
-                <p className=" text-maroon text-m font-garamond w-32 leading-tight">
+                <p className=" text-maroon text-m font-garamond w-32 leading-tight pb-44">
                   Join us in celebrating our love. Your presence would be truly
                   cherished
                 </p>
