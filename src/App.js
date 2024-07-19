@@ -74,10 +74,10 @@ function App() {
         {/* <BackgroundMusic /> */}
         <div id="secondPage" className="relative min-h-screen bg-paper w-screen">
           <section className="relative items-center justify-center bg-cover md:bg-right-bg h-screen w-screen">\
-            <div>
+            <div className="w-screen">
               <img src="/images/new-landing-page.png"
                   alt="landing-page"
-                  className="w-screen"
+                  className=""
                   />
             </div>
             <div className="md:block hidden">
@@ -135,7 +135,8 @@ function App() {
             </FadeInSection>
           </section>
 
-          <section className="relative items-center justify-center min-h-screen md:bg-right-bg fade-in">
+          <section className="relative items-center justify-center min-h-screen md:bg-right-bg fade-in mt-12">
+          
             <FadeInSection>
               <img
                 src="/images/daun-1.png"
@@ -151,6 +152,7 @@ function App() {
                 </p>
               </FadeInSection>
             </div>
+  
             <FadeInSection>
               <img
                 src="/images/daun-2.png"
