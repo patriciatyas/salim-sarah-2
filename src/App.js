@@ -43,14 +43,12 @@ function App() {
     //   top: document.body.scrollHeight,
     //   behavior: 'smooth'
     // });
-    if (secondPage) {
-      window.scrollTo({
-        top: secondPage.offsetTop,
-        behavior: 'smooth'
-      });
-    } else {
-      console.error("Second section element not found");
-    }
+    
+    window.scrollTo({
+      top: secondPage.offsetTop,
+      behavior: 'smooth'
+    });
+    
   };
 
   return (
@@ -72,7 +70,7 @@ function App() {
       <div className="md:scrollable-right">
       {/* <BackgroundMusic /> */}
         <div id="secondPage" className="relative min-h-screen bg-paper">
-          <section className="relative items-center justify-center bg-landing-page bg-cover md:bg-right-bg pt-7">
+          <section className="relative items-center justify-center bg-landing-page bg-cover md:bg-right-bg pb-36 pt-7">
             <div className="md:block hidden">
               <FadeInSection>
                 <img
@@ -96,7 +94,7 @@ function App() {
                 />
               </FadeInSection>
             </div>
-            <div className="flex flex-col items-center justify-center text-center pt-[188px] fade-in">
+            <div className="flex flex-col items-center justify-center text-center pt-[168px] fade-in">
               <FadeInSection>
                 <p className=" text-maroon text-m font-garamond w-32 leading-tight">
                   Welcome to Our New Beginning
@@ -109,7 +107,7 @@ function App() {
                 <img src="/images/sarah-1.png" alt="sarah-1" className="pt-2" />
               </FadeInSection>
               <FadeInSection>
-                <p className=" text-maroon text-m font-garamond w-32 leading-tight pb-44">
+                <p className=" text-maroon text-m font-garamond w-32 leading-tight">
                   Join us in celebrating our love. Your presence would be truly
                   cherished
                 </p>
