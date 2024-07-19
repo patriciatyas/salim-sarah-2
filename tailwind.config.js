@@ -17,6 +17,7 @@ module.exports = {
         'landing-page': "url('/public/images/pilar-2.png')",
         'wedding-gift': "url('/public/images/flower-pillar.png')",
         'right-bg' : "url('/public/images/right-bg.png')",
+        'new-landing-page': "url('/public/images/new-landing-page.png')",
       },
       colors: {
         'maroon': '#730101',

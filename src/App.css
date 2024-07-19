@@ -38,17 +38,22 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
 
 @layer components {
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+
   .fixed-left {
-    position: fixed;
-    height: 100%;
+    /* position: fixed; */
+    height: 100vh;
     background: url('/public/images/left-bg.png');
     /* background-size: cover; */
     width: 60%;
   }
 
   .scrollable-right {
-    margin-left: 60%;
     overflow-y: auto;
     height: 100vh;
+    width: 40%;
   }
 }
