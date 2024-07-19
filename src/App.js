@@ -72,8 +72,14 @@ function App() {
 
       <div className="md:scrollable-right">
         {/* <BackgroundMusic /> */}
-        <div id="secondPage" className="relative min-h-screen bg-paper">
-          <section className="relative items-center justify-center bg-new-landing-page bg-cover md:bg-right-bg pb-36 pt-7">
+        <div id="secondPage" className="relative min-h-screen bg-paper w-screen">
+          <section className="relative items-center justify-center bg-cover md:bg-right-bg h-screen w-screen">\
+            <div>
+              <img src="/images/new-landing-page.png"
+                  alt="landing-page"
+                  className="w-screen"
+                  />
+            </div>
             <div className="md:block hidden">
               <FadeInSection>
                 <img
