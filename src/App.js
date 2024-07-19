@@ -74,7 +74,7 @@ function App() {
         {/* <BackgroundMusic /> */}
         <div id="secondPage" className="relative min-h-screen bg-paper w-screen">
           <section className="relative items-center justify-center bg-cover md:bg-right-bg h-screen w-screen">\
-            <div className="w-screen">
+            <div className="w-screen flex justify-center items-center">
               <img src="/images/new-landing-page.png"
                   alt="landing-page"
                   className=""
