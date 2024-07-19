@@ -17,7 +17,7 @@ body {
     animation: fadeIn ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background: url('/public/images/cut-bg.png');
+    background: url('/public/images/bg-berdua.png');
 }
 
 
