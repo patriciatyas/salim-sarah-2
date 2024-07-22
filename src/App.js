@@ -311,7 +311,7 @@ function App() {
               </FadeInSection>
               <FadeInSection>
                 <p className="pt-2 text-maroon font-garamond text-m text-center tracking-wide font-semibold">
-                  10:00 PM - 13:00 PM
+                  10:00 AM - 13:00 PM
                 </p>
               </FadeInSection>
               <div className="flex flex-row items-center justify-center">
